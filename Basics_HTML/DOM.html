@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Manipulation</title>
+</head>
+<body>
+    <h1 id="heading">Varun Sharma</h1>
+    <a href="https://www.google.com">Google</a>
+    <p class="content">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Quisquam, quod.
+    </p>
+    <ol id="oList">
+        <li class="item">1</li>
+        <li class="item">1s</li>
+        <li class="item">1ss</li>
+        <li class="item">1sss</li>
+
+    </ol>
+    <script>
+        var h1id = document.getElementById("heading");//getElementById
+        console.log(h1id);
+        var pclass = document.getElementsByClassName("content");//getElementsByClassName
+        console.log(pclass);
+        
+        var tag = document.getElementsByTagName("h1");//getElementsByTagName
+        console.log(tag);
+
+        var p = document.querySelector(".content");//querySelector
+        console.log(p);
+
+        var plist = document.querySelectorAll(".content");
+        console.log(plist);
+
+        var oList = document.getElementById("oList");
+        console.log(oList);
+
+        console.log(h1id.innerText);//allow html code to write between quotes.
+        h1id.innerText="<i>Varun Sharma</i>";
+
+        console.log(h1id.innerHTML);//works similarly like text content but it is slower.
+        h1id.innerHTML="<i>Varun Sharma</i>";
+
+        h1id.style.color="red";
+        h1id.style.backgroundColor="yellow";
+        h1id.style["background-color"]="blue";//override value of backgroundColor to blue.
+
+        var href = document.querySelector("a").getAttribute("href");
+        console.log(href);
+        document.querySelector("a").setAttribute("href", "https://www.google.com");
+        console.log(document.querySelector("a").getAttribute("href"));
+
+        h1id.classList.toggle("head");
+        console.log(h1id.classList.contains("head"));
+        //h1id.classList.remove("head");
+
+        //CREATE AND APPEND
+
+        var ele = document.createElement('a');
+        ele.textContent='anchor tag'
+        ele.setAttribute('href', "https://google.com");
+        document.getElementById('con').append(ele);
+        </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: black;
+            color: white;
+            height: 50px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="alertButton()">Alert</button>
+
+</body>
+<script>
+    var num = parseInt(prompt("Enter a number"));
+    let org = num;
+    var rev = 0;
+    while(num>0){
+        var rem = num%10;
+        rev = rev*10+rem;
+        num = parseInt(num/10);
+    }
+    if(org==rev){
+        function alertButton(){
+            alert(`Palindrome`);
+        }
+    }
+    else{
+        function alertButton(){
+            alert(`Not Palindrome`);
+        }
+    }
+
+
+</script>
+</html>

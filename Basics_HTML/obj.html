@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var stdDetails = [
+        {
+          id: "25",
+          name: "Harsh Raj",
+          age: 25,
+          class: "SA",
+          email: "harsh@gmail.com",
+        },
+        {
+          id: "04",
+          name: "Aditya",
+          age: 25,
+          class: "SA",
+          email: "aditya@gmail.com",
+        },
+        {
+          id: "41",
+          name: "Nishant",
+          age: 25,
+          class: "SA",
+          email: "nishant@gmail.com",
+        },
+        {
+          id: "34",
+          name: "Krishna",
+          age: 25,
+          class: "SA",
+          email: "krishna@gmail.com",
+        },
+      ];
+      // FOREACH()
+      // Executes a callback for each assigned array element.
+      // Returns undefined and is commonly used for side effects.
+      // Callback parameters: element, index, original array.
+      stdDetails.forEach((data) => {
+        console.log("forEach name: ", data.name, 'age: ', data.age);
+      });
+      stdDetails.forEach((currentValue, index, array) => {
+        console.log(index);
+        console.log('Array: ', array);
+      })
+      var obj2 = stdDetails.map((data)=>{
+         ({...data, age: data.age+1})
+      })
+      console.log(obj2);
+      //MAP : manipulate data and return that array.
+      var filt = stdDetails.filter((data)=>data.id>10);
+      console.log(filt);
+      //FILTER : returns a new array containing elements for which the callback returns a truthy value.
+      var arr4 = [1,2,3,52,52,8,5,878,53];
+      console.log(arr4.reduce((acc, cv)=> acc+cv));
+      //REDUCE : executes a reducer function on each element of the array.
+      console.log(arr4.filter((data)=> data%2 === 0).map((num) => num/2).reduce((sum, num) => sum+num, 0));
+      // Objects
+      // Objects store related dta using key-value pairs.
+      // Properties store values, and methods are functions.
+      // associated with an object.
+      Object.keys(arr4);
+      Object.values(arr4);
+      delete arr4.key_name;
+      
+      // CONSOLE METHODS
+
+      // console.log() displays values for inspection.
+      // console.error() displays error messages.
+      // console.warn() displays warnings.
+      // console.table() displays tabular data.
+      try{
+        var a=n;
+        const n=10;
+
+      }catch(e){
+        console.error('error', e.message);
+
+      }finally{
+        console.log("done");
+      }
+
+      function ageCheck(age){
+       try{ 
+        if(age<18){
+            throw new Error('not Eligible');
+
+        }
+        console.log('eligible');
+
+      } catch(e){
+        console.error(e.message);
+
+      }
+    }
+    ageCheck(10);
+    ageCheck(25);
+
+
+</script>
+</html>

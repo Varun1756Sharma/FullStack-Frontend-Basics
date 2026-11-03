@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Document</title>
+        
+    </head>
+    <body>
+    </body>
+    <script>
+        // 1. ARRAY METHODS
+        //Arrays store multiple values in a single variable.
+        // can store elements of both same and different data types.
+        // Elements can be from primitive or non-primitive datatype.
+        var array = ['ele1', 'ele2'];
+        const obj = {
+            key1: "value1", key2: "value1", key3: "value3", key4: "value4",
+
+        }
+        var stdDetails = [
+            {name: "varun", age: 20, gender: "male"},
+            {name: "sachin", age: 21, gender: "male"},
+            {name: "harshit", age: 22, gender: "male"},
+            {name: "priya", age: 23, gender: "female"},
+        ]
+        //Push - returns the new length of the array after adding an element to the end of the array.
+        var num = stdDetails.push({name: "vivek", age: 23, gender: "male" });
+        console.log(num);
+        console.log(stdDetails);
+        //Pop - removes the last element from an array and returns that element.
+        var num1 = stdDetails.pop();
+        console.log(num1);
+        console.log(stdDetails);
+        var num2 = stdDetails.unshift({name: "vivek", age: 23, gender: "male" });
+        console.log(num2);
+        // UNSHIFT - adda an element to the beginning of the array and returns the new length of the array.
+        // Push last me add karta hai aur unshift beginning me add karta hai.(Difference)
+        // Dono ka return value array ki length hai.(similarity)
+        console.log(stdDetails);
+        var num3 = stdDetails.shift();
+        // SHIFT - removes the first element and return it.
+        // Pop last me se element remove karta hai aur shift beginning me se element remove karta hai.(Difference)
+        // Dono ka return value removed element hai. (similarity)
+        console.log(num3);
+        var num4 = stdDetails.slice(1,2);
+        console.log(num4);
+        console.log('splice', stdDetails.splice(1,2));
+        // SLICE - returns a shallow copy of a portion of an array into a new array
+        // SPLICE - changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+        console.log(stdDetails);
+        //CONCAT - after concatenation last element of arr1, first element of arr2 combines)
+        var arr1 = [1,2,5,2,52,5,2,6,3];
+        var arr2 = [1,2,5,2,52,5,2,9,4,0];
+        var num5 = arr1+arr2;
+        console.log(num5);
+        console.log(arr1.indexOf(2));
+        // if any index element not contains in the array then it will return -1.
+        console.log(arr1.includes(75));
+        // INCLUDES - returns true if the array contains a certain element, and false if it does not.
+        // INDEXOF - returns the first index at which a given element can be found in the array, or -1 if it is not present.
+        console.log(arr1.join());
+        console.log(arr1.join(""));
+        console.log(arr1.join("b"));
+        // JOIN - joins/combines all elements of an array into a string.
+        console.log(arr1.reverse());
+        // REVERSE - reverses the order of the elements in an array.
+        console.log(arr1.sort());
+        // SORT - sorts the elements of an array in place and returns the sorted array.
+
+    </script>
+    </html>
